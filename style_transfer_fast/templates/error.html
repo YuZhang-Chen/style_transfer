@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>處理錯誤</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>發生錯誤</h1>
+        <div class="error-message">
+            <p>處理您的請求時發生錯誤：</p>
+            <pre>{{ error }}</pre>
+        </div>
+        <div class="actions">
+            <a href="/" class="button">返回首頁</a>
+        </div>
+    </div>
+</body>
+</html>

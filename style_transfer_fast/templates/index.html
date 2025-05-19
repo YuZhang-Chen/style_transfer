@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>風格轉換應用</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>圖片風格轉換</h1>
+        
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="upload-section">
+                <h2>上傳原始圖片</h2>
+                <div class="file-input">
+                    <input type="file" name="content_image" id="content_image" accept="image/*" required>
+                    <div class="preview" id="content-preview">
+                        <p>預覽圖片將顯示在這裡</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="style-section">
+                <h2>選擇風格圖片</h2>
+                <select name="style_image" id="style-select" required>
+                    <option value="" disabled selected>請選擇風格</option>
+                    <option value="Guernica">Guernica</option>
+                    <option value="Night">Night</option>
+                    <option value="soleil_levant">soleil levant</option>
+                </select>
+                
+                <div class="style-preview" id="style-preview">
+                    <p>選擇風格後預覽將顯示在這裡</p>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">開始轉換</button>
+        </form>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
