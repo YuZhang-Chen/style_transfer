@@ -66,7 +66,7 @@ def main(content_file, style_name):
     # The style prediction model was trained with image size 256 and it's the 
     # recommended image size for the style image (though, other sizes work as 
     # well but will lead to different results).
-    style_img_size = (256, 256)  # Recommended to keep it at 256.
+    style_img_size = (512, 512)  # Using a larger size for the style image
 
     content_image = load_local_image(content_image_url, content_img_size)
     style_image = load_local_image(style_image_url, style_img_size)
